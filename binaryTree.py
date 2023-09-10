@@ -6,9 +6,9 @@ class BinaryTree:
 
     def add_child(self, new_node):
         if self.root.left is None:
-            self.root.left = Node(new_node)
+            self.root.left = new_node
         elif self.root.right is None:
-            self.root.right = Node(new_node)
+            self.root.right = new_node
 
     def find_node(self, data):
         return self._find_node(self.root, data)
@@ -29,6 +29,6 @@ class BinaryTree:
 
     def _print_tree(self, current_node):
         if current_node is not None:
+            print(current_node.data)
             self._print_tree(current_node.left)
-            print(current_node.data, end=' ')
             self._print_tree(current_node.right)
