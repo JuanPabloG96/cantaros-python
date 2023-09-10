@@ -1,9 +1,10 @@
 from binaryTree import BinaryTree
+from node import Node
 
-tree = BinaryTree(1)
-tree.add_child(2)
-tree.add_child(3)
-tree.add_child(4)
-tree.add_child(5)
+tree = BinaryTree("nodo raíz")
+nodo_izquierdo = Node("nodo izquierdo de nodo raíz");
+nodo_derecho = Node("nodo derecho de nodo raíz");
+tree.add_child(nodo_izquierdo)
+tree.add_child(nodo_derecho)
 
 tree.print_tree() 
